@@ -1,3 +1,6 @@
 .rbenv-gemsets
 .ruby-version
 *.gem
+test/examples/asciidoc-html/*.html
+test/examples/asciidoc-html/*.xml
+
