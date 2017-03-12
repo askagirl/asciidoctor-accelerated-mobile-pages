@@ -10,12 +10,11 @@
   - height = "100%"
 
 - unless attr(1) == 'background' || attr(1) == "canvas"
-  figure (id=@id class=roles
-      style=[("text-align: #{attr :align}" if attr? :align),("float: #{attr :float}" if attr? :float)].compact.join('; '))
+  figure (id=@id class=roles)
     - if attr? :link
       a.image href=(attr :link)
         amp-img src=image_uri(attr :target) alt=(attr :alt) width=(width) height=(height) style=((attr? :background) ? "background: #{attr :background}" : nil)
     - else
-      amp-img src=image_uri(attr :target) alt=(attr :alt) width=(width) height=(height) style=((attr? :background) ? "background: #{attr :background}" : nil)
+      amp-img src=image_uri(attr :target) alt=(attr :alt) width=(width||=1024) height=(height||=768) style=((attr? :background) ? "background: #{attr :background}" : nil)
   - if title?
     .title=captioned_title
