@@ -15,6 +15,6 @@
       a.image href=(attr :link)
         amp-img src=image_uri(attr :target) alt=(attr :alt) width=(width) height=(height) style=((attr? :background) ? "background: #{attr :background}" : nil)
     - else
-      amp-img src=image_uri(attr :target) alt=(attr :alt) width=(width||=1024) height=(height||=768) style=((attr? :background) ? "background: #{attr :background}" : nil)
+      amp-img src=image_uri(attr :target) alt=(attr :alt) width=(width||=320) height=(height||=240) style=((attr? :background) ? "background: #{attr :background}" : nil)
   - if title?
     .title=captioned_title
